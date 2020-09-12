@@ -18,7 +18,7 @@ class AuthManager {
         return Auth.auth().currentUser != nil
     }
 
-    var currentUser: User? {
+    var user: User! {
         return Auth.auth().currentUser
     }
     

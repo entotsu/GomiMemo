@@ -12,42 +12,34 @@ import FirebaseCore
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
         
         FirebaseApp.configure()
         
         if !AuthManager.shared.isExistAccount {
-
-            print("there is no account!")
-            
             AuthManager.shared.createNewAnonymousAccount { result in
-
                 switch result {
-
-                case .success(let user):
-                    print("success to create user: \(user.uid)")
-                    FirestoreManager.shared.createUserDocument(user: user) { result in
-                        switch result {
-                        case .success(_):
-                            print("success to create user folder.")
-                        case .failure(let dbErr):
-                            print("failer to create user folder!")
-                            print(dbErr)
-                        }
-                    }
-
+                case .success(_):
+                    print("scceed to create new account.")
                 case .failure(let authErr):
-                    print("failed to cerate user account!")
                     print(authErr)
                 }
             }
         } else {
-            print("account is existing: \(AuthManager.shared.currentUser?.uid)")
+            print("account is existing: \(AuthManager.shared.user!)")
+            
+            //🚧
+            Timer.schedule(delay: 4) { timer in
+                
+                let content = MonthlyDiary(
+                    title: "Ending lab, Creating GomiMemo, Improving&Prototyping UI",
+                    text: "lab is enddddddddddd"
+                )
+                
+                MonthlyDiaryStorage.shared.updateDiary(user: AuthManager.shared.user!, year: 2020, month: .sep, content: content)
+            }
         }
-        
+                
         return true
     }
 
@@ -64,7 +56,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
-
 }
 

@@ -20,12 +20,16 @@ class MonthlyDiaryStorage {
     }
         
     let db: Firestore
-    
-    func getListener() {
-    
+        
+    func updateDiary(user: User, year: Int, month: Month, content: MonthlyDiary) {
+        FirestoreManager.shared.userDocument(user: user)?
+                .collection("monthly-diary").document("diary")
+                .collection("year").document("\(year)")
+                .collection("month").document("\(month.rawValue)")
+                .setData(content.toFirestoreData())
     }
     
-    func update(month: MonthID) {
+    func getListener() {
         
     }
 }
