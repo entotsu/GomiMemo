@@ -2,11 +2,12 @@
 //  AppDelegate.swift
 //  GomiMemo
 //
-//  Created by 岡本 拓也 on 2020/09/12.
+//  Created by Takuya Okamoto on 2020/09/12.
 //  Copyright © 2020 TakuyaOkamoto. All rights reserved.
 //
 
 import UIKit
+import FirebaseCore
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        FirebaseApp.configure()
+        
+        if !AuthManager.shared.isExistAccount {
+
+            print("there is no account!")
+            
+            AuthManager.shared.createNewAnonymousAccount { result in
+
+                switch result {
+
+                case .success(let user):
+                    print("success to create user: \(user.uid)")
+                    FirestoreManager.shared.createUserDocument(user: user) { result in
+                        switch result {
+                        case .success(_):
+                            print("success to create user folder.")
+                        case .failure(let dbErr):
+                            print("failer to create user folder!")
+                            print(dbErr)
+                        }
+                    }
+
+                case .failure(let authErr):
+                    print("failed to cerate user account!")
+                    print(authErr)
+                }
+            }
+        } else {
+            print("account is existing: \(AuthManager.shared.currentUser?.uid)")
+        }
+        
         return true
     }
 
