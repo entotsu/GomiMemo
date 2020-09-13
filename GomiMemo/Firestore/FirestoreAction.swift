@@ -1,5 +1,5 @@
 //
-//  FirestoreManager.swift
+//  FirestoreAction.swift
 //  GomiMemo
 //
 //  Created by Takuya Okamoto on 9/12/20.
@@ -11,9 +11,9 @@ import FirebaseAuth
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
-class FirestoreManager {
+class FirestoreAction {
 
-    public static let shared = FirestoreManager()
+    public static let shared = FirestoreAction()
     
     private init() {
         self.db = Firestore.firestore()
@@ -26,4 +26,8 @@ class FirestoreManager {
             .collection("versions").document(FIRESTORE_DB_VERSION.string)
             .collection("users").document(user.uid)
     }
+}
+
+enum DBVersion {
+    case v1
 }

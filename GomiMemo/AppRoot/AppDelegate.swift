@@ -36,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     text: "lab is enddddddddddd"
                 )
                 
-                MonthlyDiaryStorage.shared.updateDiary(user: AuthManager.shared.user!, year: 2020, month: .sep, content: content)
+                FirestoreAction.shared.monthlyDiary.updateDiary(user: AuthManager.shared.user!, year: 2020, month: .sep, content: content)
             }
         }
                 

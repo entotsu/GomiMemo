@@ -1,5 +1,5 @@
 //
-//  FirestoreDBVersion.swift
+//  DBVersion+Util.swift
 //  GomiMemo
 //
 //  Created by Takuya Okamoto on 9/12/20.
@@ -8,9 +8,7 @@
 
 import Foundation
 
-enum FirestoreDBVersion {
-
-    case v1
+extension DBVersion {
     
     var string: String {
         switch self {

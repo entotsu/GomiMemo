@@ -8,4 +8,4 @@
 
 import Foundation
 
-let FIRESTORE_DB_VERSION: FirestoreDBVersion = .v1
+let FIRESTORE_DB_VERSION: DBVersion = .v1

@@ -10,9 +10,9 @@
 		BC58E5DB250CD1EC001DDD1A /* MonthlyDiary.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC58E5DA250CD1EC001DDD1A /* MonthlyDiary.swift */; };
 		BC58E5DE250CD39A001DDD1A /* Timer+util.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC58E5DD250CD39A001DDD1A /* Timer+util.swift */; };
 		BC58E5E0250CD3E1001DDD1A /* Month.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC58E5DF250CD3E1001DDD1A /* Month.swift */; };
-		BC89D8DD250CC077001A82F9 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC89D8DC250CC077001A82F9 /* FirestoreManager.swift */; };
+		BC89D8DD250CC077001A82F9 /* FirestoreAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC89D8DC250CC077001A82F9 /* FirestoreAction.swift */; };
 		BC89D8E0250CC0AF001A82F9 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC89D8DF250CC0AF001A82F9 /* Const.swift */; };
-		BC89D8E2250CC5FA001A82F9 /* FirestoreDBVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC89D8E1250CC5FA001A82F9 /* FirestoreDBVersion.swift */; };
+		BC89D8E2250CC5FA001A82F9 /* DBVersion+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC89D8E1250CC5FA001A82F9 /* DBVersion+Util.swift */; };
 		BC94F71F250C9AF000D7CD31 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BC94F71E250C9AF000D7CD31 /* FirebaseFirestoreSwift */; };
 		BC94F721250C9AF000D7CD31 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = BC94F720250C9AF000D7CD31 /* FirebaseAuth */; };
 		BC94F723250C9AF000D7CD31 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = BC94F722250C9AF000D7CD31 /* FirebaseFirestore */; };
@@ -22,7 +22,7 @@
 		BC94F731250CA30F00D7CD31 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = BC94F730250CA30F00D7CD31 /* RxRelay */; };
 		BC94F733250CA30F00D7CD31 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = BC94F732250CA30F00D7CD31 /* RxCocoa */; };
 		BC94F735250CA30F00D7CD31 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = BC94F734250CA30F00D7CD31 /* RxBlocking */; };
-		BC94F737250CA9D300D7CD31 /* MonthlyDiaryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC94F736250CA9D300D7CD31 /* MonthlyDiaryStorage.swift */; };
+		BC94F737250CA9D300D7CD31 /* MonthlyDiaryAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC94F736250CA9D300D7CD31 /* MonthlyDiaryAction.swift */; };
 		BC94F739250CAAA100D7CD31 /* MonthID.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC94F738250CAAA100D7CD31 /* MonthID.swift */; };
 		BC94F73E250CACCA00D7CD31 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC94F73D250CACCA00D7CD31 /* AuthManager.swift */; };
 		BCA6FE76250C96C400F6E74E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA6FE75250C96C400F6E74E /* AppDelegate.swift */; };
@@ -37,12 +37,12 @@
 		BC58E5DA250CD1EC001DDD1A /* MonthlyDiary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyDiary.swift; sourceTree = "<group>"; };
 		BC58E5DD250CD39A001DDD1A /* Timer+util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Timer+util.swift"; sourceTree = "<group>"; };
 		BC58E5DF250CD3E1001DDD1A /* Month.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Month.swift; sourceTree = "<group>"; };
-		BC89D8DC250CC077001A82F9 /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
+		BC89D8DC250CC077001A82F9 /* FirestoreAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreAction.swift; sourceTree = "<group>"; };
 		BC89D8DF250CC0AF001A82F9 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
-		BC89D8E1250CC5FA001A82F9 /* FirestoreDBVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreDBVersion.swift; sourceTree = "<group>"; };
+		BC89D8E1250CC5FA001A82F9 /* DBVersion+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DBVersion+Util.swift"; sourceTree = "<group>"; };
 		BC89D8E3250CC907001A82F9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BC94F726250C9C1500D7CD31 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		BC94F736250CA9D300D7CD31 /* MonthlyDiaryStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyDiaryStorage.swift; sourceTree = "<group>"; };
+		BC94F736250CA9D300D7CD31 /* MonthlyDiaryAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyDiaryAction.swift; sourceTree = "<group>"; };
 		BC94F738250CAAA100D7CD31 /* MonthID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthID.swift; sourceTree = "<group>"; };
 		BC94F73D250CACCA00D7CD31 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		BCA6FE72250C96C400F6E74E /* GomiMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GomiMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,12 +82,39 @@
 			path = Util;
 			sourceTree = "<group>";
 		};
+		BC58E5E1250DB04A001DDD1A /* Action */ = {
+			isa = PBXGroup;
+			children = (
+				BC94F736250CA9D300D7CD31 /* MonthlyDiaryAction.swift */,
+			);
+			path = Action;
+			sourceTree = "<group>";
+		};
+		BC58E5E2250DB051001DDD1A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BC58E5DA250CD1EC001DDD1A /* MonthlyDiary.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BC58E5E3250DB121001DDD1A /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				BC89D8E1250CC5FA001A82F9 /* DBVersion+Util.swift */,
+				BC94F738250CAAA100D7CD31 /* MonthID.swift */,
+				BC58E5DF250CD3E1001DDD1A /* Month.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		BC89D8D9250CC010001A82F9 /* Firestore */ = {
 			isa = PBXGroup;
 			children = (
-				BC89D8E1250CC5FA001A82F9 /* FirestoreDBVersion.swift */,
-				BC89D8DC250CC077001A82F9 /* FirestoreManager.swift */,
-				BC94F728250C9E5600D7CD31 /* MonthlyDiaryStorage */,
+				BC89D8DC250CC077001A82F9 /* FirestoreAction.swift */,
+				BC58E5E1250DB04A001DDD1A /* Action */,
+				BC58E5E2250DB051001DDD1A /* Model */,
+				BC58E5E3250DB121001DDD1A /* Util */,
 			);
 			path = Firestore;
 			sourceTree = "<group>";
@@ -108,17 +135,6 @@
 				BCA6FE79250C96C400F6E74E /* ContentView.swift */,
 			);
 			path = AppRoot;
-			sourceTree = "<group>";
-		};
-		BC94F728250C9E5600D7CD31 /* MonthlyDiaryStorage */ = {
-			isa = PBXGroup;
-			children = (
-				BC94F736250CA9D300D7CD31 /* MonthlyDiaryStorage.swift */,
-				BC94F738250CAAA100D7CD31 /* MonthID.swift */,
-				BC58E5DA250CD1EC001DDD1A /* MonthlyDiary.swift */,
-				BC58E5DF250CD3E1001DDD1A /* Month.swift */,
-			);
-			path = MonthlyDiaryStorage;
 			sourceTree = "<group>";
 		};
 		BC94F73C250CACB800D7CD31 /* Auth */ = {
@@ -260,13 +276,13 @@
 				BC58E5DE250CD39A001DDD1A /* Timer+util.swift in Sources */,
 				BCA6FE76250C96C400F6E74E /* AppDelegate.swift in Sources */,
 				BCA6FE78250C96C400F6E74E /* SceneDelegate.swift in Sources */,
-				BC89D8E2250CC5FA001A82F9 /* FirestoreDBVersion.swift in Sources */,
-				BC94F737250CA9D300D7CD31 /* MonthlyDiaryStorage.swift in Sources */,
+				BC89D8E2250CC5FA001A82F9 /* DBVersion+Util.swift in Sources */,
+				BC94F737250CA9D300D7CD31 /* MonthlyDiaryAction.swift in Sources */,
 				BCA6FE7A250C96C400F6E74E /* ContentView.swift in Sources */,
 				BC94F739250CAAA100D7CD31 /* MonthID.swift in Sources */,
 				BC94F73E250CACCA00D7CD31 /* AuthManager.swift in Sources */,
 				BC58E5E0250CD3E1001DDD1A /* Month.swift in Sources */,
-				BC89D8DD250CC077001A82F9 /* FirestoreManager.swift in Sources */,
+				BC89D8DD250CC077001A82F9 /* FirestoreAction.swift in Sources */,
 				BC89D8E0250CC0AF001A82F9 /* Const.swift in Sources */,
 				BC58E5DB250CD1EC001DDD1A /* MonthlyDiary.swift in Sources */,
 			);
